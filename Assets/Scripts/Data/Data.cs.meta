@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: b63363bbb3a713142b855af0a24945ef
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - stageAsset: {fileID: 4900000, guid: e3f34cc939e908846bb3ca06b2e40171, type: 3}
+  - oddAsset: {fileID: 4900000, guid: 16b73bbf681d60948886554ccdd53c56, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

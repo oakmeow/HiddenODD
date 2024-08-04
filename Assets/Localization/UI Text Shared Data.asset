@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Text Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI Text
+  m_TableCollectionNameGuidString: 3c3b3765fc5c9404b8f2f0b7f89af947
+  m_Entries:
+  - m_Id: 10364944384
+    m_Key: ui_language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40084938981376
+    m_Key: ui_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40114169085952
+    m_Key: ui_brightness
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145824865353728
+    m_Key: ui_back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428657630543872
+    m_Key: ui_reset_only
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428716594069504
+    m_Key: ui_reset_all
+    m_Metadata:
+      m_Items: []
+  - m_Id: 874498610724864
+    m_Key: found_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1438449048256512
+    m_Key: ui_next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985888926007296
+    m_Key: ui_main_menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985948480929792
+    m_Key: ui_next_stage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3985988700110848
+    m_Key: ui_stay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6656776834154496
+    m_Key: ui_warn_reset_only
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6656852528758784
+    m_Key: ui_warn_reset_all
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6659425260306432
+    m_Key: ui_confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6853991368261632
+    m_Key: ui_exit
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2159063963686141954
+  references:
+    version: 2
+    RefIds:
+    - rid: 2159063963686141954
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1673436035483
