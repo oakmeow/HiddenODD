@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Localization.Settings;
 
 public class Data : MonoBehaviour
@@ -108,6 +106,28 @@ public class Data : MonoBehaviour
     /*
      * PlayerPrefs
      */
+    public static void DefaultStage(string stageID, int stageAmount, bool isUnlock)
+    {
+        // Reset Unlock stage
+        int unlock = (isUnlock ? 1 : 0);
+        PlayerPrefs.SetInt($"stage_unlock{stageID}", unlock);
+
+        // Reset Found ODDs
+        for (int i = 1; i <= stageAmount; i++)
+        {
+            PlayerPrefs.SetInt($"odd_found{stageID}.{i}", 0);
+        }
+        
+        // Reset lasting
+        PlayerPrefs.DeleteKey($"last_camera_zoom{stageID}");
+        PlayerPrefs.DeleteKey($"last_camera_x{stageID}");
+        PlayerPrefs.DeleteKey($"last_camera_y{stageID}");
+        PlayerPrefs.DeleteKey($"last_target_index{stageID}");
+        PlayerPrefs.DeleteKey($"last_stage{stageID}");
+
+        PlayerPrefs.Save();
+    }
+
     [ContextMenu("Default Stage1.1")]
     public void DefaultStage11()
     {
@@ -117,5 +137,22 @@ public class Data : MonoBehaviour
         PlayerPrefs.SetInt("odd_found1.1.3", 0);
         PlayerPrefs.SetInt("odd_found1.1.4", 0);
         PlayerPrefs.SetInt("odd_found1.1.5", 0);
+
+        PlayerPrefs.DeleteKey("last_camera_zoom1.1");
+    }
+    [ContextMenu("Default Stage1.2")]
+    public void DefaultStage12()
+    {
+        PlayerPrefs.SetInt("stage_unlock1.2", 0);
+        PlayerPrefs.SetInt("odd_found1.2.1", 0);
+        PlayerPrefs.SetInt("odd_found1.2.2", 0);
+        PlayerPrefs.SetInt("odd_found1.2.3", 0);
+        PlayerPrefs.SetInt("odd_found1.2.4", 0);
+        PlayerPrefs.SetInt("odd_found1.2.5", 0);
+        PlayerPrefs.SetInt("odd_found1.2.6", 0);
+        PlayerPrefs.SetInt("odd_found1.2.7", 0);
+        PlayerPrefs.SetInt("odd_found1.2.8", 0);
+
+        PlayerPrefs.DeleteKey("last_camera_zoom1.2");
     }
 }

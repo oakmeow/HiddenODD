@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     public int nextUnlock { get { return data.StageGetUnlock(stageIndex + 1); }
                             set { data.StageSetUnlock(stageIndex + 1, 1); }}
 
+    public static int currentState { get => SceneManager.GetActiveScene().buildIndex - 1; }
+
     // Stage Pass Grade & complete grade
     public int passMinimium { get { return (int)Mathf.Ceil((stageTotal * 50.0f / 100.0f)); } }
     public int passRemain
@@ -135,13 +137,13 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Pause")]
     public void AudioPause() { bgm.GetComponent<AudioSource>().Pause(); }
     public void AudioPlay(float delay) { bgm.GetComponent<AudioSource>().PlayDelayed(delay); }
-    [ContextMenu("Save Screen")]
+    /*[ContextMenu("Save Screen")]
     public void SaveScreen()
     {
         Debug.Log("Save Screenshot");
         ScreenCapture.CaptureScreenshot(Application.dataPath + "/screenshots/" + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".png", 4);
         UnityEditor.AssetDatabase.Refresh();
-    }
+    }*/
 
 
     // Scene Functions

@@ -117,8 +117,8 @@ public class Setting : MonoBehaviour
         }
         else
         {
-            resetOnlyButton.SetActive(true);
-            resetAllButton.SetActive(false);
+            resetOnlyButton.SetActive(false);   // false ยกเลิกปุ่ม Reset Only this Land
+            resetAllButton.SetActive(true);     // true ให้โชว์แต่ Reset all land
             mainMenuButton.SetActive(true);
         }
     }
@@ -210,12 +210,17 @@ public class Setting : MonoBehaviour
     {
         confirmSFX.GetComponent<AudioSource>().Play();
 
-        loading.GetComponent<Loading>().Show();
-
         warningMenu.SetActive(false);
         settingMenu.SetActive(false);
 
         t = 0.01f;
+
+        // Reset All Lands
+        Data.DefaultStage("1.1", 5, true);
+        Data.DefaultStage("1.2", 8, false);
+
+        //loading.GetComponent<Loading>().Show();
+        loading.GetComponent<Loading>().LoadScene(0);
     }
 
 

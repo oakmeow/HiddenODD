@@ -72,6 +72,8 @@ public class StageSelect : MonoBehaviour
             return;
         }
 
+
+
         // ถ้า unlock แล้วให้เล่นเสียง selectSFX แล้วโหลดเปลี่ยนฉาก
         selectSFX.GetComponent<AudioSource>().PlayDelayed(0);
         // ดึงคอมโพเน้น Loading จาก Parent(StageContent) มาใส่ในตัวแปร loading
